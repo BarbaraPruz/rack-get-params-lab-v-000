@@ -20,7 +20,7 @@ class Application
       item = req.params["item"]
       if  @@items.include?(search_term)
         cart << item
-        resp.write("Added #{item}")
+        resp.write("added #{item}")
       else
         resp.write("Couldn't find #{item}")
       end
@@ -30,7 +30,7 @@ class Application
       @@cart.each do |item|
         resp.write "#{item}\n"
       end
-      
+
     else
       resp.write "Path Not Found"
     end
